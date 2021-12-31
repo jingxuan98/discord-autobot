@@ -3,31 +3,40 @@ const {types} = require("./utils/types");
 
 // list all the words here, will pick them randomly, doesn't matter how many!
 const words = [
-    "lfg",
+    "lfg lfg lfg lfg lfg",
     "to the moon",
     "community is lit here",
     "wow",
     "how you guys doing",
-    "lfg",
+    "It's so busy in here, crazy.  how fast it's growing, keep it up yall, it's awesome!",
     "to the moon",
     "community is lit here",
-    "wow",
+    "grind grind grind, keep on grind",
     "lfglfglfg",
     "moving all day",
     "gonna lit",
     "Lets go guys",
     "lets get wl tgt",
-    "wagmi",
+    "wagmi wagmi wagmi wagmi",
     "I mean WAGMIIII",
     "dont spam hahah",
     "leveling up",
     "gonna keep grinding",
     "to the moon",
-    "Lets go fam",
+    "Lets go Lets go fam",
     "wl we comin",
     "ganggang",
     "keep it going guys",
-    "lol"
+    `Grind until your fingers bleed! This project is fckn awesome so don’t put your phone away till lvl 10!
+    Moon incoming! Rocket launching!!!! 
+    Love you all
+    Hope you have a wonderful day",
+    "so happy to be here`,
+    "love you guys",
+    "you guys are so active",
+    "we all gonna make it!",
+    "Beware of scammers guys",
+    "OMG, the chat exp is so low gg"
 ]
 let logCount = 0;
 
@@ -130,7 +139,7 @@ const discord = {
 
             async function randomWord () {
                 const random = words[Math.floor(Math.random() * words.length)]
-                await discord.page.type('span[data-slate-object="text"]', random, {
+                await discord.page.type('span[data-slate-object="text"]', random + " ", {
                     delay: 100
                 });
 
@@ -143,7 +152,7 @@ const discord = {
             }
 
             // change the first number for minutes
-            // 3 * 60 * 1000 = 180000ms === 3 minutes
+            // 3 * 60 * 1000 
             setInterval(randomWord, delay * 60 * 1000)
 
     }
